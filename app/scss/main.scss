@@ -1,3 +1,4 @@
+@use 'sass:math';
 @import "vars";
 @import "fonts";
 @import "libs";
@@ -47,7 +48,50 @@ body {
 b, strong {
 	font-weight: bold;
 }
-
+header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0 $gutter;
+	height: 70px;
+	z-index: 100;
+	background-color: lighten($color: #10272517, $amount: 80);
+	.logo {
+		margin: 0;
+		padding: 0;
+		a {
+			color: $text;
+				text-decoration: none;
+				text-transform: uppercase;
+				font-weight: bold;
+				font-size: 22px;
+		}
+	}
+	ul {
+		display: flex;
+		margin: 0;
+		padding: 0;
+		li {
+			list-style-type: none;
+			margin-left: 25px;
+			a {
+				color: $text;
+				text-decoration: none;
+				text-transform: uppercase;
+				font-weight: bold;
+				font-size: 19px;
+			}
+		}
+	}
+}
+.section{
+	&__one {
+		background-image: url(../img/preview.jpg);
+		background-size: cover;
+		background-position: center;
+		display: block;
+	}
+}
 
 
 @import "media"; // Always at the end
