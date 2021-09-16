@@ -49,13 +49,16 @@ b, strong {
 	font-weight: bold;
 }
 header, footer {
+	background-color: lighten($color: #52fdf2ad, $amount: 30);
+}
+.header, .footer {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 	padding: 0 $gutter;
 	height: 70px;
 	z-index: 100;
-	background-color: lighten($color: #10272517, $amount: 80);
+	
 	.logo {
 		margin: 0;
 		padding: 0;
@@ -85,21 +88,18 @@ header, footer {
 	}
 }
 .footer {
-	background-color: lighten($color: #131212, $amount: 10);
-	color: #fff;
+	//background-color: lighten($color: #131212, $amount: 10);
+	//color: #fff;
 	height: 170px;
-	z-index: 100;
-	align-items: flex-start;
-	* {
-		color: #fff;
-	}
+	//z-index: 100;
+	//display: flex;
+	//justify-content: space-between;
+	//align-items: center;
+	//width: 100%;
 }
 .logo__foo {
 	display: flex;
 	flex-direction: column-reverse;
-	.l-logo {
-		color: #fff;
-	}
 }
 .card {
 	padding-top: 10vh;
@@ -112,6 +112,7 @@ header, footer {
 		display: block;
 		height: 75vh;
 		position: relative;
+		margin-bottom: 24px;
 		.blur {
 			position: absolute;
 			background-color: rgba(51, 50, 50, 0.8);
@@ -124,7 +125,6 @@ header, footer {
 	
 }
 .overlay {
-	border-bottom: 1px solid #fff;
 	.custom {
 		&__title {
 			color: #fff;
@@ -144,11 +144,19 @@ header, footer {
 				font-weight: bold;
 				text-decoration: none;
 				padding: 5px;
-				// border: 1px solid #666;
-				// background-color: #666;
 			}
 		}
 	}
 }
-
+.card {
+	img {
+		width: 100%;
+	}
+}
+.badges {
+	text-transform: uppercase;
+	font-weight: bold;
+	margin: 0;
+	padding-top: 1.5rem;
+}
 @import "media"; // Always at the end
