@@ -48,7 +48,7 @@ body {
 b, strong {
 	font-weight: bold;
 }
-header {
+header, footer {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -61,10 +61,10 @@ header {
 		padding: 0;
 		a {
 			color: $text;
-				text-decoration: none;
-				text-transform: uppercase;
-				font-weight: bold;
-				font-size: 22px;
+			text-decoration: none;
+			text-transform: uppercase;
+			font-weight: bold;
+			font-size: 22px;
 		}
 	}
 	ul {
@@ -84,14 +84,71 @@ header {
 		}
 	}
 }
+.footer {
+	background-color: lighten($color: #131212, $amount: 10);
+	color: #fff;
+	height: 170px;
+	z-index: 100;
+	align-items: flex-start;
+	* {
+		color: #fff;
+	}
+}
+.logo__foo {
+	display: flex;
+	flex-direction: column-reverse;
+	.l-logo {
+		color: #fff;
+	}
+}
+.card {
+	padding-top: 10vh;
+}
 .section{
 	&__one {
-		background-image: url(../img/preview.jpg);
+		background-image: url(../img/slide.jpg);
 		background-size: cover;
 		background-position: center;
 		display: block;
+		height: 75vh;
+		position: relative;
+		.blur {
+			position: absolute;
+			background-color: rgba(51, 50, 50, 0.8);
+			top: 0;
+			bottom: 0;
+			right: 0;
+			left: 0;
+		}
+	}
+	
+}
+.overlay {
+	border-bottom: 1px solid #fff;
+	.custom {
+		&__title {
+			color: #fff;
+			font-weight: bold;
+			line-height: 0.8;
+			width: 400px;
+		}
+		&__teme {
+			color: rgb(240, 240, 240);
+			line-height: 1.3;
+			width: 400px;
+		}
+		&__button {
+			a {
+				color: #fff;
+				text-transform: uppercase;
+				font-weight: bold;
+				text-decoration: none;
+				padding: 5px;
+				// border: 1px solid #666;
+				// background-color: #666;
+			}
+		}
 	}
 }
-
 
 @import "media"; // Always at the end
