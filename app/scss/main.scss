@@ -88,14 +88,7 @@ header, footer {
 	}
 }
 .footer {
-	//background-color: lighten($color: #131212, $amount: 10);
-	//color: #fff;
 	height: 170px;
-	//z-index: 100;
-	//display: flex;
-	//justify-content: space-between;
-	//align-items: center;
-	//width: 100%;
 }
 .logo__foo {
 	display: flex;
@@ -104,7 +97,34 @@ header, footer {
 .card {
 	padding-top: 10vh;
 }
+.brc {
+	&__list {
+		display: flex;
+		margin: 0;
+		padding: 0;
+	}
+	&__item {
+		list-style: none;
+		font-size: 14px;
+		a {
+			color: #888;
+			text-decoration: none;
+		}
+	}
+}
+.active {
+	font-weight: 600;
+	&::before {
+		content: "\f105";
+		font-family: 'FontAwesome', sans-serif;
+		padding: 0 10px;
+		color: #888;
+	}
+}
 .section{
+	&__brc {
+		line-height: 60px;
+	}
 	&__one {
 		background-image: url(../img/slide.jpg);
 		background-size: cover;
@@ -121,6 +141,9 @@ header, footer {
 			right: 0;
 			left: 0;
 		}
+	}
+	&__categories {
+
 	}
 	
 }
@@ -158,5 +181,10 @@ header, footer {
 	font-weight: bold;
 	margin: 0;
 	padding-top: 1.5rem;
+	&-cat {
+		text-transform: uppercase;
+		font-weight: bold;
+		margin: 0;
+	}
 }
 @import "media"; // Always at the end
