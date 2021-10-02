@@ -24,8 +24,24 @@ function changeSlide (timeUp) {
 sliderTimer();
 //active line
 const tabLine = document.querySelector('.tab');
-const tabLineLength = tabLine.querySelectorAll('li').length;
+const tabLineLength = tabLine.querySelectorAll('li');
 const tabContentLine = document.querySelector('.tabs__content');
-for (let i = 0; tabLineLength > i; i++) {
-    //console.log(tabLine[i])
+function activeTo (e) {
+    if(tabLineLength('active') !== null) {
+        tabLineLength.classList.remove('active')
+    }
+    e.target.className = 'active';
 }
+// for (let i = 0; tabLineLength.length > i; i++) {
+//     tabLineLength[i].addEventListener('click', function() {
+//         let upBack;
+//         if(tabLineLength[i].classList === 'active') {
+//             //upBack = tabLineLength[i].classList;
+//             //tabLineLength[i].classList.remove('active');
+//         } else {
+//             tabLineLength[i].classList.add('active');
+//             tabLineLength[i].classList.remove('active');
+//         }
+        
+//     })
+// }
