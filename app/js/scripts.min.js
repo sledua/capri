@@ -26,22 +26,17 @@ sliderTimer();
 const tabLine = document.querySelector('.tab');
 const tabLineLength = tabLine.querySelectorAll('li');
 const tabContentLine = document.querySelector('.tabs__content');
-function activeTo (e) {
-    if(tabLineLength('active') !== null) {
-        tabLineLength.classList.remove('active')
+for (let i = 0; i < tabLineLength.length; i++) {
+    tabLineLength[i].onclick = function (e) {
+        console.log(tabLineLength)
+        removeClass();
+        if(e.target.classList.contains !== "active") {
+            this.classList.add('active')
+        }
     }
-    e.target.className = 'active';
 }
-// for (let i = 0; tabLineLength.length > i; i++) {
-//     tabLineLength[i].addEventListener('click', function() {
-//         let upBack;
-//         if(tabLineLength[i].classList === 'active') {
-//             //upBack = tabLineLength[i].classList;
-//             //tabLineLength[i].classList.remove('active');
-//         } else {
-//             tabLineLength[i].classList.add('active');
-//             tabLineLength[i].classList.remove('active');
-//         }
-        
-//     })
-// }
+function removeClass() {
+    for(let i = 0; i < tabLineLength.length; i++) {
+        tabLineLength[i].classList.remove('active');
+    }
+}
