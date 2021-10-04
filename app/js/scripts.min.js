@@ -30,10 +30,11 @@ const tabContentLineLenght = tabContentLine.querySelectorAll('.tab-pane');
 for (let i = 0; i < tabLineLength.length; i++) {
     tabLineLength[i].onclick = function (e) {
         e.preventDefault();
+        console.log(e.target)
         removeClass();
         if(e.target.classList.contains !== "active") {
             this.classList.add('active');
-            console.log(e.target.hash)
+            
             if (e.target.hash === `#${tabContentLineLenght[i].id}`){
                 tabContentLineLenght[i].classList.add("fade");
                 tabContentLineLenght[i].classList.add("in");
