@@ -185,7 +185,7 @@ header, footer {
 }
 .products-tab {
 	padding-top: 130px;
-    padding-bottom: 110px;
+	padding-bottom: 110px;
 	.tab {
 		text-align: center;
 		margin-bottom: 74px;
@@ -207,7 +207,6 @@ header, footer {
 				padding-bottom: 18px;
 				color: $text;
 				text-decoration: none;
-				transition: all 0.4s ease 0.2s;
 			}
 		}
 		> li > a {
@@ -222,25 +221,13 @@ header, footer {
 				right: 0;
 				bottom: 0;
 				opacity: 0;
+				transition: all 0.3s ease 0.3s;
 			}
-			&:hover {
+			&:hover::after {
 				opacity: 1;
 				width: 100%;
-				height: 3px;
-				
-				background: #dd2a2a;
-				> &::after{
-					content: '';
-					position: absolute;
-					display: block;
-					width: 100%;
-					height: 3px;
-					background: #dd2a2a;
-					left: 0;
-					right: 0;
-					bottom: 0;
-					opacity: 1;
-				}
+				left: 0;
+				right: 0;
 			}
 		}
 		.active a{
@@ -255,7 +242,14 @@ header, footer {
 				right: 0;
 				bottom: 0;
 				opacity: 1;
-
+			}
+		}
+	}
+	.tabs__content {
+		.tab-pane {
+			display: none;
+			&.active {
+				display: block;
 			}
 		}
 	}

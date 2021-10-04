@@ -26,17 +26,27 @@ sliderTimer();
 const tabLine = document.querySelector('.tab');
 const tabLineLength = tabLine.querySelectorAll('li');
 const tabContentLine = document.querySelector('.tabs__content');
+const tabContentLineLenght = tabContentLine.querySelectorAll('.tab-pane');
 for (let i = 0; i < tabLineLength.length; i++) {
     tabLineLength[i].onclick = function (e) {
-        console.log(tabLineLength)
+        e.preventDefault();
         removeClass();
         if(e.target.classList.contains !== "active") {
-            this.classList.add('active')
+            this.classList.add('active');
+            console.log(e.target.hash)
+            if (e.target.hash === `#${tabContentLineLenght[i].id}`){
+                tabContentLineLenght[i].classList.add("fade");
+                tabContentLineLenght[i].classList.add("in");
+                tabContentLineLenght[i].classList.add("active");
+            }
+            
         }
     }
 }
 function removeClass() {
     for(let i = 0; i < tabLineLength.length; i++) {
         tabLineLength[i].classList.remove('active');
+        tabContentLineLenght[i].classList.remove('active');
+        tabContentLineLenght[i].classList.remove('in');
     }
 }
