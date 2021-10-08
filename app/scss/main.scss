@@ -55,7 +55,7 @@ header, footer {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	padding: 0 $gutter;
+	padding: 0 10px;
 	height: 70px;
 	.logo {
 		margin: 0;
@@ -98,7 +98,7 @@ header, footer {
 .brc {
 	&__list {
 		display: flex;
-		margin: 0;
+		margin: 34px 0;
 		padding: 0;
 		.active {
 			font-weight: 600;
