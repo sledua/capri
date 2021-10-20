@@ -1,4 +1,6 @@
-//slider
+const HOME = document.querySelector('body.home');
+if(HOME) {
+    //slider
 const sideSlide = document.querySelector('.side-slider');
 const mainSlide = document.querySelector('.main-slider');
 const slideCount = mainSlide.querySelectorAll('div').length;
@@ -50,4 +52,5 @@ function removeClass() {
         tabContentLineLenght[i].classList.remove('active');
         tabContentLineLenght[i].classList.remove('in');
     }
+}
 }
