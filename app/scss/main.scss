@@ -369,4 +369,18 @@ header, footer {
 		}
 	}
 }
+.img-list {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+.img-list-trak {
+	display: flex;
+  width: 4970px;
+	position: relative;
+  top: 0;
+  left: 0;
+}
 @import "media"; // Always at the end
