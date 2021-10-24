@@ -1,4 +1,5 @@
 const HOME = document.querySelector('body.home');
+const ITEM = document.querySelector('body.item');
 if(HOME) {
     //slider
 const sideSlide = document.querySelector('.side-slider');
@@ -53,4 +54,8 @@ function removeClass() {
         tabContentLineLenght[i].classList.remove('in');
     }
 }
+}
+if(ITEM) {
+	const img_list_trak = document.querySelector('.img-list-trak');
+	console.log(img_list_trak)
 }

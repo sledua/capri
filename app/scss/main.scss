@@ -369,7 +369,7 @@ header, footer {
 		}
 	}
 }
-.img-list {
+.img-list, .img-polite {
   position: relative;
   display: block;
   overflow: hidden;
@@ -378,9 +378,37 @@ header, footer {
 }
 .img-list-trak {
 	display: flex;
+	transform: translate3d(-740px, 0px, 0px);
   width: 4970px;
 	position: relative;
   top: 0;
   left: 0;
+	&-hovers {
+		float: left;
+		height: 450px;
+	}
+}
+.img-polite-traks {
+	display: flex;
+	justify-content: space-between;
+	padding-top: 15px;
+	padding-bottom: 5px;
+	.img-polite-trak {
+		.image {
+			// margin: 0;
+			// padding: 2px;
+			// background-color: rebeccapurple;
+		}
+		.active {
+			box-shadow: 0px 7px 5px -5px rgba(20, 33, 43, 0.8);
+			//padding: 0;
+			//border: 2px rebeccapurple solid;
+			//background-color: #3ab3ab;
+		}
+	}
+}
+.product-info {
+	padding-left: 100px;
+	min-width: 640px;
 }
 @import "media"; // Always at the end
