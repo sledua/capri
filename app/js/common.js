@@ -57,5 +57,18 @@ function removeClass() {
 }
 if(ITEM) {
 	const img_list_trak = document.querySelector('.img-list-trak');
-	console.log(img_list_trak)
+	const pic_imgs = document.querySelector('.img-polite-traks');
+	const pic_img = pic_imgs.querySelectorAll('.img-polite-trak');
+	//получить номер нужной пикчи
+	//проверить есть ли такой
+	//прокрутить до нужного номера + или -
+	pic_imgs.addEventListener('click', e => {
+		let rr = e.target.dataset.indexNumber;
+		console.log(e.target.dataset.indexNumber);
+		console.log(pic_img[rr]);
+	})
+	for(i=0; i > pic_img; i++) {
+		console.log(pic_imgs[i]);
+	}
+	
 }
