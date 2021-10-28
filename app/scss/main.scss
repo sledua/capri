@@ -401,6 +401,7 @@ header, footer {
 .img-list-trak {
 	display: flex;
 	transform: translate3d(-740px, 0px, 0px);
+	transition: all 0.6s ease 0s;
   width: 4970px;
 	position: relative;
   top: 0;
@@ -417,7 +418,7 @@ header, footer {
 	padding-bottom: 5px;
 	.img-polite-trak {
 		.active {
-			box-shadow: 0px 7px 5px -5px rgba(20, 33, 43, 0.8);
+			box-shadow: 0px 17px 15px -5px rgba(20, 33, 43, 0.8);
 		}
 	}
 }
@@ -490,7 +491,6 @@ header, footer {
 				margin-top: 50px;
 				h3 {
 					margin-top: 0;
-					
 					line-height: 1.1;
 					color: inherit;
 					padding-left: 30px;
